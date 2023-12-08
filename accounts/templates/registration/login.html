@@ -1,0 +1,22 @@
+{% extends "gestion_prod/base.html" %}
+
+{% block title %}Sign In{% endblock %}
+
+{% block content %}
+  <h1 class="ma">Sing In</h1>
+  {% if form.errors %}
+    <p>
+      Your username and password didn't match.
+      Please try again.
+    </p>
+  {% else %}
+   
+  {% endif %}
+  <div class="login-form">
+    <form action="{% url 'accounts:login' %}" method="post">
+      {{ form.as_p }}
+      {% csrf_token %}
+      <p><input type="submit" value="Sign In"></p>
+    </form>    
+  </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!-- Your HTML file -->
+{% extends "gestion_prod/base.html" %}
+{% block content %}
+<div class="ma">
+    <h1>My Cart</h1>
+</div>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Image</th>
+            <th>Product Name</th>
+            <th>Quantity</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for order in orders %}
+            <tr>
+                <td><img src ="{{order.product.thembnail.url}}" alt ="{{ order.product.name }}"></td>
+                <td>{{ order.product.name }}</td>
+                <td>{{ order.quantite }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}

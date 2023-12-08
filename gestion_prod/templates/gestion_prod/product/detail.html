@@ -1,0 +1,25 @@
+{% extends "gestion_prod/base.html" %}
+{% block title %}Product Details{% endblock %}
+{% block content %}
+    <h1 class="ma">Product Details</h1>
+    <div class="cadre">
+        <div class="texte">
+            <div class="titre-cadre">
+                <h2>{{ product.name }}</h2>
+            </div>
+            <div class="details-cadre">
+                <h3>Price : {{ product.price }}</h3>
+                <h3>Stock : {{ product.stock }}</h3>
+                <p>{{ product.description }}</p>
+                {% if user.is_authenticated %}
+                    <p>
+                        <a href="{% url 'gestion_prod:add_to_cart' product.slug %}">
+                            Add to cart
+                        </a>
+                    </p>
+                {% endif %}
+            </div>
+        </div>
+         <img src="{{ product.thembnail.url }}" alt="{{ product.name }}">
+    </div>
+{% endblock %}

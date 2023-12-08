@@ -1,0 +1,405 @@
+body { 
+    margin:0;
+    padding:0;
+    font-family:helvetica, sans-serif; 
+}
+
+a { 
+    color:#00abff;
+    text-decoration:none; 
+}
+
+h1 { 
+    font-weight:normal;
+    border-bottom:1px solid #bbb;
+    padding:0 0 10px 0;
+}
+
+h2 {
+    font-weight:normal;
+    margin:30px 0 0;
+}
+
+#content { 
+    float:left;
+    width:60%;
+    padding:0 0 0 30px; 
+    margin: 0 auto;    
+}*
+
+.ma{
+    margin-top: 30px;
+    margin-bottom: 90px;
+}
+
+#sidebar { 
+    float:right;
+    width:30%;
+    padding:10px;
+    background:#efefef; 
+    height:100%;
+    margin-top: 50px;
+    margin-right: 20px;
+}
+
+p.date { 
+    color:#ccc;
+    font-family: georgia, serif;
+    font-size: 12px;
+    font-style: italic; 
+}
+
+/* pagination */
+.pagination { 
+    margin:40px 0; 
+    font-weight:bold;
+}
+
+/* forms */
+label { 
+    float:left;
+    clear:both;
+    color:#333;
+    margin-bottom:4px; 
+}
+input, textarea { 
+    clear:both;
+    float:left;
+    margin:0 0 10px;
+    background:#ededed;
+    border:0;
+    padding:6px 10px;
+    font-size:12px;
+}
+input[type=submit] {
+    font-weight:bold;
+    background:#00abff;
+    color:#fff;
+    padding:10px 20px;
+    font-size:14px;
+    text-transform:uppercase; 
+}
+.errorlist { 
+    color:#cc0033;
+    float:left;
+    clear:both;
+    padding-left:10px; 
+}
+
+/* comments */
+.comment {
+    padding:10px;
+}
+.comment:nth-child(even) {
+    background:#efefef;
+}
+.comment .info {
+    font-weight:bold;
+    font-size:12px;
+    color:#666;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px; 
+    justify-content: center;
+}
+
+.card {
+    flex: 0 0 calc(33.333% - 20px);
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #ffffff;
+    min-width: 24rem;
+    max-width: 24rem;
+    margin-bottom: 5px; 
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    border-radius: 10px;
+    background-color: #ffffff;
+    color: #20c997;
+    padding: 0.5rem 1rem;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 5px;
+    margin-top: 1px;
+}
+
+    .card-info {
+        border-radius: 10px;
+        background-color: #ffffff;
+        color: #333;
+        padding: 0.5rem 1rem;
+    }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .card-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+  }
+
+  .cadre {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+}
+
+.cadre img {
+    max-width: 560px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.cadre .texte {
+    flex-grow: 1;
+}
+
+.cadre .titre-cadre {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.cadre h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.cadre p {
+    font-size: 16px;
+    color: #555;
+}
+
+.espace {
+    margin-top: 100px;
+}
+
+.cadre1 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.cadre1 img {
+    max-width: 550px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.cadre1 .texte {
+    flex-grow: 1;
+}
+
+.details-cadre {
+    border: 2px solid #000; 
+    padding: 20px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+nav a:hover {
+    color: #00abff;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table th, .table td {
+    border: 2px solid #ddd;
+    padding: 12px; 
+    text-align: center;
+}
+
+.table th {
+    background-color: #413b3b;
+    color: white;
+}
+
+.table img {
+    min-width: 7rem;
+    max-width: 10rem;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); 
+}
+
+.table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table tbody tr:hover {
+    background-color: #e0e0e0;
+}
+
+@media (max-width: 600px) {
+    .table th, .table td {
+        padding: 8px;
+    }
+}
+
+.login-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 10px;
+}
+
+.login-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="submit"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.login-form input[type="submit"] {
+    background-color: #20c997;
+    color: #fff;
+    cursor: pointer;
+}
+
+.login-form input[type="submit"]:hover {
+    background-color: #20c997;
+}
+
+@media (max-width: 600px) {
+    .login-form input[type="text"],
+    .login-form input[type="password"],
+    .login-form input[type="submit"] {
+        margin-bottom: 8px;
+        padding: 8px;
+    }
+}
+
+.signup-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    margin-left: 500px;
+}
+
+.signup-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-form label {
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.signup-form input[type="text"],
+.signup-form input[type="email"],
+.signup-form input[type="password"],
+.signup-form button {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.signup-form button {
+    background-color: #20c997;
+    color: #fff;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: #20c997;
+}
+
+@media (max-width: 600px) {
+    .signup-form input[type="text"],
+    .signup-form input[type="email"],
+    .signup-form input[type="password"],
+    .signup-form button {
+        margin-bottom: 8px;
+        padding: 8px;
+    }
+}

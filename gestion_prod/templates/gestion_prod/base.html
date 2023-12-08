@@ -1,0 +1,42 @@
+{% load products_tags %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/gestion_prod.css' %}">
+</head>
+<body>
+    <header>
+         <nav>
+            <div class="nav-wrapper">
+            <a href="#" class="brand-logo">E-commerce</a>
+            <ul id="" class="right hide-on-med-and-down">
+                <li><a href="{% url 'gestion_prod:list_prod' %}">Products</a></li>
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'cart' %}">Cart</a></li>
+                
+                <li><a href="{% url 'accounts:logout' %}">Logout</a></li> Hi {{ user.username }}!
+                {% else %}
+                <li><a href="{% url 'accounts:signup' %}">Sign Up</a></li>
+                <li><a href="{% url 'accounts:login' %}">Log In</a></li>
+                {% endif %}
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <div id="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% if user.is_authenticated %}
+    <div id="sidebar">
+        <h2>My Products</h2>
+        <p>This is my products.</p>
+        I've written {% total_products %} products so far.
+        <h3>latest_products</h3>
+        {% show_latest_products 3 %}
+    </div>
+    {% endif %}
+</body>
+</html> 

@@ -1,0 +1,23 @@
+{% extends "gestion_prod/base.html" %}
+
+{% block title %}My Products{% endblock %}
+
+{% block content %}
+<h1 class="ma">All Products</h1>
+<div class="card-container">
+    {% for product in products %}
+        <div class="card">
+            <img class ="card-img-top" src="{{ product.thembnail.url }}" alt="{{ product.name }}">
+            <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <div class="card-info">
+                    <p class="card-text">Price: {{ product.price }} Dt</p>
+                    <p class="card-text">Stock: {{ product.stock }}</p>
+                </div>
+                <a href="{{ product.get_absolute_url }}" class="card-link">details</a>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+{% include "pagination.html" with page=products %}
+{% endblock %}
